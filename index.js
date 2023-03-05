@@ -45,8 +45,12 @@ console.log(changeFruit(fruit))
 //4.  Write a function that accepts an array of numbers as an argument. Return the maximum value in the array.
 //e.g., max([4, 5, 10, -2]) // maximum value is 10
 
-let numberOfData = Math.max(78, 54, 95, 38, 67, 90);
-console.log('The maximum number is ' + numberOfData)
+function getMaxOfArray(numArray) {
+    return Math.max.apply(null, numArray);
+  }
+  let arr = [1, 2, 3, 60, 45];
+let max = Math.max(...arr);
+console.log('The maximum number is ' + max)
 
 
 //5.  Write a function called valTimesIndex which accepts an array of numbers and returns a new array with each value multiplied by the index it is at in the array:
